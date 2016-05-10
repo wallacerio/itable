@@ -1,0 +1,180 @@
+/**
+ * iTable v1.0 - 29/04/2016
+ * makes responsive table tags and dynamic
+ *
+ * developed by Wallace Rio <wallrio@gmail.com>
+ * wallrio.com
+ * 
+ * tested on firefox/chrome/opera/ie8/safari
+ * 
+ */
+
+
+ table.itable.vertical{
+	border:1px solid #ccc;
+	border-spacing: 0px;
+} table.itable.vertical tr {
+	
+} table.itable.vertical tr td{
+	padding: 7px;
+	border-bottom: 1px dotted #ddd;
+	border-right: 1px dotted #ddd;
+	color: #666;
+	text-align: left;
+} table.itable.vertical tr th{
+	text-align: left;
+	padding: 7px;
+	color: #666;
+} table.itable.vertical tr th:first-child{
+	font-weight: bold;
+	background: #eee;
+	
+	
+
+}
+
+
+
+ table.itable.horizontal{
+	border:1px solid #ccc;
+	border-spacing: 0px;
+
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: block;
+	position: relative;
+}
+
+table.itable.horizontal tbody{
+width: 100%;
+display: table;
+}
+
+table.itable.horizontal tr{
+	width: 100%;
+	display: table;
+	border-bottom: 0px;
+}
+
+table.itable.horizontal tr td{
+	padding: 7px;
+	border-right: 1px dotted #ccc;
+	border-bottom: 1px dotted #ccc;
+	color: #666;
+	/*width: 50%;*/
+
+}
+table.itable.horizontal tr:first-child th{
+	font-weight: bold;
+	background: #eee;
+	color: #666;	
+	padding: 7px;
+	
+	text-align: left;
+}
+table.itable.horizontal tr:first-child th:not(:last-child){	
+	border-right: 1px solid #ccc;
+}
+table.itable .fixed {	
+	position: absolute;
+	width: 100%;
+	display: table;
+	top: 0px;
+	left: 0px;
+}
+
+
+
+table.itable.horizontal.selecting tr:not(:first-child):hover{
+	cursor: pointer;
+}table.itable.horizontal.selecting tr:not(:first-child):hover{
+	background: #ddd;
+}table.itable.horizontal.selecting tr:not(:first-child):hover th{
+	background: #ddd;
+} table.itable.horizontal.selecting tr:not(:first-child):active{
+	background: #351737;
+} table.itable.horizontal.selecting tr:not(:first-child):active th{
+	background: #351737;	
+} table.itable.horizontal.selecting tr:not(:first-child):active *{	
+	color: #fff;
+}
+
+
+table.itable.vertical.selecting tr:hover{
+	cursor: pointer;
+}table.itable.vertical.selecting tr:hover{
+	background: #ddd;
+}table.itable.vertical.selecting tr:hover th{
+	background: #ddd;
+} table.itable.vertical.selecting tr:active{
+	background: #351737;
+} table.itable.vertical.selecting tr:active th{
+	background: #351737;	
+} table.itable.vertical.selecting tr:active *{	
+	color: #fff;
+}
+
+
+table.itable.selecting tr[data-status="active"]{
+	background: #521B56;
+} table.itable.selecting tr[data-status="active"] *{	
+	background: #521B56 !important;
+	color: #fff;
+}table.itable.selecting tr:active td:before {
+	background: #521B56;
+	color: #fff;
+}table.itable.selecting tr[data-status="active"] td:before {
+	background: #521B56;
+	color: #fff;	
+}
+
+ table.itable.full{
+	width: 100%;
+
+}
+
+
+
+
+
+@media (max-width: 530px){
+	table.horizontal tr  {
+		margin-top: 0px !important;
+
+	}
+	table.itable.horizontal tr:first-child th{
+		display: none;
+	}
+	table.horizontal tr td {
+		display: block !important;
+
+		width: 100% !important;
+		position: relative;
+	
+		padding-left:0px !important;
+		
+	}table.horizontal tr:nth-child(odd){
+		background: #F8F8F8;	
+	}table.horizontal tr td:last-child {	
+		border-bottom: 1px solid #ccc !important;
+
+	}table.horizontal tr td:before {
+		content:attr(data-title);
+		
+		background: #eee;
+		
+		left: 0px;
+		top: 0px;
+		height: 100%;
+		
+		padding: 7px;
+		margin-right: 5px;
+		box-sizing: border-box;
+		font-weight: bold;
+	}
+
+	table.itable:not(.vertical) tr td,
+	table.itable.horizontal tr td{		
+		border-bottom: 0px dotted #ccc;
+	}
+}
