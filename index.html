@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Responsible - iTable</title>
+	<meta name="viewport" content="initial-scale=1,minimum-scale=1, maximum-scale=1,user-scalable=no">  
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+	<link  rel="stylesheet" href="itables.css">
+	<script type="text/javascript" src="itables.js"></script>
+	
+	<script type="text/javascript">
+	itable.bind('verticalTable','click',function(trs,element){
+		alert(JSON.stringify(trs));	
+	});
+
+	itable.bind('horizontalTable','click',function(trs,element){
+		alert(JSON.stringify(trs));	
+	});
+
+</script>
+</head>
+<body>
+
+<h1>Table Responsible - iTable - v1.0</h1>
+
+<p>Developed by Wallace Rio <wallrio@gmail.com></p>
+<hr>
+
+<h2>Download files</h2>
+<a href="itables.css">itables.css</a><br>
+<a href="itables.js">itables.js</a>
+<br><br><br>
+
+<h2>Cross-Browser</h2>
+<p>Tested on Firefox 45 / IE 8 / Opera 12 / Chrome 38 / Safari 5</p>
+<br><br>
+
+
+<h2>Using</h2>
+<p>Insert script tag and link tag into your head document html</p>
+<pre>
+	&lt;link  rel="stylesheet" href="itables.css"&gt;
+	&lt;script type="text/javascript" src="itables.js"&gt;&lt;/script&gt;
+</pre>
+<br><br><br>
+
+<h2>Table vertical</h2>
+<p>Insert on your tag TABLE the class itable:</p>
+<pre>
+	&lt;table class="itable vertical selecting full"&gt;	
+		&lt;tr &gt;
+			&lt;th style="width:20%"&gt;Fulano&lt;/th&gt;
+			&lt;td &gt;30&lt;/td&gt;			
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th style="width:20%" &gt;Fulano 2&lt;/th&gt;
+			&lt;td&gt;25&lt;/td&gt;			
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th style="width:20%"&gt;Fulano 3&lt;/th&gt;
+			&lt;td&gt;15&lt;/td&gt;			
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th style="width:20%"&gt;Fulano 4&lt;/th&gt;
+			&lt;td&gt;40&lt;/td&gt;			
+		&lt;/tr&gt;
+		
+	&lt;/table&gt;
+</pre>
+
+
+	<table class="itable vertical selecting full" id="verticalTable">
+	
+		<tr >
+			<th style="width:20%">Fulano</th>
+			<td >30</td>			
+		</tr>
+		<tr>
+			<th style="width:20%" >Fulano 2</th>
+			<td>25</td>			
+		</tr>
+		<tr>
+			<th style="width:20%">Fulano 3</th>
+			<td>15</td>			
+		</tr>
+		<tr>
+			<th style="width:20%">Fulano 4</th>
+			<td>40</td>			
+		</tr>
+		
+	</table>
+
+
+<br><br>
+<hr>
+<br>
+
+<h2>Table horizontal</h2>
+<p>Insert on your tag TABLE the class itable:</p>
+
+<pre>
+	&lt;table class="itable horizontal selecting full"&gt;
+		&lt;tr  &gt;
+			&lt;th style="width:20%" &gt;Name&lt;/th&gt;
+			&lt;th  &gt;Age&lt;/th&gt;			
+					
+		&lt;/tr&gt;	
+		&lt;tr&gt;
+			&lt;td style="width:20%" &gt;Fulano&lt;/td&gt;
+			&lt;td&gt;30&lt;/td&gt;			
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style="width:20%"&gt;Fulano 1&lt;/td&gt;
+			&lt;td&gt;25&lt;/td&gt;			
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style="width:20%"&gt;Fulano 3&lt;/td&gt;
+			&lt;td&gt;15&lt;/td&gt;			
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style="width:20%"&gt;Fulano 4&lt;/td&gt;
+			&lt;td&gt;40&lt;/td&gt;			
+		&lt;/tr&gt;		
+	&lt;/table&gt;
+</pre>
+
+	<table class="itable horizontal selecting full" id="horizontalTable" style="height:120px">
+		<tr  >
+			<th style="width:20%" >Name</th>
+			<th  >Age</th>			
+					
+		</tr>	
+		<tr>
+			<td style="width:20%" >Fulano</td>
+			<td>30</td>			
+		</tr>
+		<tr>
+			<td style="width:20%">Fulano 1</td>
+			<td>25</td>			
+		</tr>
+		<tr>
+			<td style="width:20%">Fulano 3</td>
+			<td>15</td>			
+		</tr>
+		<tr>
+			<td style="width:20%">Fulano 4</td>
+			<td>40</td>			
+		</tr>		
+	</table>
+
+	<h2>Action</h2>
+
+	<pre>
+		&lt;script type="text/javascript"&gt;
+			itable.click('id_of_table',function(element){
+				alert(element.innerHTML);
+			});
+		&lt;/script&gt;
+	</pre>
+	<br>
+	<hr>
+	<br>
+
+	<h2>OBS:</h2>
+
+	<p>Attributes to class use:</p>
+	<strong>selecting</strong>: for mode select with hover and active<br>
+	<strong>full</strong>: width 100%
+
+</body>
+</html>
